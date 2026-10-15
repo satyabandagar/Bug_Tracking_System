@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Page headings */
+h1, h2 {
+    color: #1e3a5f;
+}
+
+/* Forms */
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Input fields */
+input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 8px 0 16px;
+    border: 1px solid #ccd5e0;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* Buttons */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Links */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background-color: #1e3a5f;
+    color: white;
+}

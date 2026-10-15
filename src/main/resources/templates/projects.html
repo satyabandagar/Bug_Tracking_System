@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Bug Tracking System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <h1>Project Management</h1>
+
+    <a th:href="@{/projects/add}">Add New Project</a>
+
+    <br><br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Created At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="project : ${projects}">
+                <td th:text="${project.id}"></td>
+                <td th:text="${project.name}"></td>
+                <td th:text="${project.description}"></td>
+                <td th:text="${project.createdAt}"></td>
+
+                <td>
+                    <form th:action="@{/projects/delete/{id}(id=${project.id})}"
+                          method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <a th:href="@{/users}">Users</a> |
+    <a th:href="@{/bugs}">Bugs</a> |
+    <a th:href="@{/comments}">Comments</a>
+
+</body>
+</html>
